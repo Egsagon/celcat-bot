@@ -1,0 +1,31 @@
+# Celcat bot configuration
+
+app:
+  # Update intervals (timedelta args)
+  interval:
+    hours: 2
+
+  # Update distance (timedelta args)
+  distance:
+    days: 15
+
+  # Discord webhook for logging
+  webhook: <discord webhook here>
+
+celcat:
+  # Celcat server URL
+  server: <celcat server root URL>
+
+  # Server timezone
+  timezone:
+
+  # App ressource type (refer to your local Celcat server for this)
+  # I don't really know what is this value but it works with it
+  ressource: 103
+
+  # Celcat groups to fetch
+  groups:
+    - <group 1>
+    - <group 2>
+
+# EOF
