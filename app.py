@@ -109,8 +109,7 @@ if __name__ == '__main__':
     
     while 1:
         try:
-            0/0
-            # update()
+            update()
         
         except Exception as err:
             logger.exception(err)
