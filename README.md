@@ -21,7 +21,7 @@ A simple configurable workflow to dynamically convert your Celcat calendars to G
 3. Setup workflow
     - Configure the workflow in `.github/workflows/update.yml` (see cron interval)
     - Upload your work to a private repo
-    - Verify data has been
+    - Verify your [Google Calendar](https://calendar.google.com/calendar) has been updated.
 
 ## License
 
