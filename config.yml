@@ -11,7 +11,7 @@ distance:
 timezone: null
 
 # Celcat resssource type value
-resssource: 103
+ressource: 103
 
 # Celcat groups to get
 groups:

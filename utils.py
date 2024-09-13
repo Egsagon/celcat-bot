@@ -16,13 +16,12 @@ def hex_to_rgb(hex_color):
     hex_color = hex_color.lstrip('#')
     return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
 
-def get_color(item: celcat.Event):
+def get_color(target: str):
     '''
     Get a Google color ID based on the Celcat HEX color.
     '''
     
-    target_hex = item.data.get('backgroundColor', '#8E24AA')
-    target_rgb = hex_to_rgb(target_hex)
+    target_rgb = hex_to_rgb(target)
     closest_color = None
     min_distance = float('inf')
 
