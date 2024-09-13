@@ -1,3 +1,9 @@
+'''
+    celcat.py
+    
+    Simple Celcat API wrapper.
+'''
+
 import httpx
 import urllib.parse
 from typing import Iterator
@@ -23,6 +29,7 @@ class Event:
     sites: list[str]
     modules: list[str]
     type: str
+    color: str
     data: dict[str] = field(repr = False)
     
     @classmethod
@@ -36,6 +43,7 @@ class Event:
             sites = data['sites'],
             modules = data['modules'],
             type = data['eventCategory'],
+            color = data['backgroundColor'],
             data = data
         )
 

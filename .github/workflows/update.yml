@@ -1,0 +1,33 @@
+# Run workflow
+
+name: Update Calendar
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '*/40 * * * *' # Every 40min
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Clone repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    
+    # Install python
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+    
+    # Install dependencies
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    
+    # Run updater
+    - name: Run updater
+      run: python update.py
+
+# EOF
