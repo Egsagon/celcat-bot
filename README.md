@@ -15,12 +15,12 @@ A simple configurable workflow to dynamically convert your Celcat calendars to G
 2. Setup project
     - Clone this repository
     - Rename your `client_secrets.json` file to `creds.json` and place it in the repo
-    - Configure `config.yml` to your will (especially `server` and `groups` keys)
-    - Install dependencies with `pip install -r requirements.txt`
+    - Configure the constants at the top of the `script.py` file
+    - Install dependencies with `pip install requests gcsa`
     - Run the `update.py` script once to link it to your Google account. This will create a `token.pickle` file
 
 3. Setup workflow
-    - Configure the workflow in `.github/workflows/update.yml` (see cron interval)
+    - Configure the `run.yml` workflow in `.github/workflows/` (see cron interval)
     - Push your modifications to a private repo of yours (with `git remote set-url origin your-private-repo.git`)
     - Wait for your CRON job to start or manually start the workflow in the `actions` tab
     - Verify your [Google Calendar](https://calendar.google.com/calendar) has been updated
